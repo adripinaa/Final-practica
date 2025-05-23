@@ -1,0 +1,426 @@
+/* --- Estilos generales --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header { text-align:center;
+  background-color: #2803ca; /* azul Real Madrid */
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul { text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* amarillo para hover */
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+footer {
+  background-color: #2803ca;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* --- Sección jugadores --- */
+
+.grupo-jugadores {
+  margin: 2rem 0;
+}
+
+.grupo-jugadores h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #2803ca;
+  padding-bottom: 0.5rem;
+  color: #2803ca;
+}
+
+.jugadores-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.jugador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.jugador:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.jugador img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;  /* CAMBIO aquí para que la foto no se corte */
+  background-color: white; /* para que no se vea raro si queda espacio */
+  border: 3px solid #2803ca;
+  margin-bottom: 0.6rem;
+}
+
+.jugador p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111;
+  text-align: center;
+}
+
+.jugador span {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.2rem;
+  background-color: #e6e6e6;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Estilos para agrandar los marcos y mejorar la visualización de las fotos */
+.jugador {
+  width: 180px;
+  height: auto;
+  text-align: center;
+  margin: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen del jugador */
+.jugador img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #2803ca; /* Azul Real Madrid */
+  margin-bottom: 10px;
+}
+
+/* Nombre del jugador */
+.jugador p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 4px 0;
+}
+
+/* Número */
+.jugador span {
+  background-color: #eee;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.jugadores-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estil secció fitxatges */
+.fichajes {
+  padding: 2rem;
+  background-color: #fff0f0;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(204, 0, 0, 0.15);
+}
+
+/* Títol de la secció */
+.fichajes h2 {
+  color: #803ca;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid #803ca;
+  padding-bottom: 0.5rem;
+}
+
+/* Contenidor de les càpsules */
+.fichajes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Càpsules individuals */
+.fichaje {
+  background-color: white;
+  border-left: 5px solid #803ca;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 180px;
+  box-shadow: 0 3px 8px rgba(204, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.fichaje:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 15px rgba(204, 0, 0, 0.35);
+}
+
+/* Imatge */
+.fichaje img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+}
+
+/* Nom jugador */
+.fichaje p {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #803ca;
+  margin: 0 0 0.3rem 0;
+}
+
+/* Posició o rol */
+.fichaje span {
+  font-size: 0.9rem;
+  color: #803ca;
+  font-style: italic;
+}
+
+/* --- Estilos generales --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #003366; /* azul Real Madrid */
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* amarillo para hover */
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+main h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #003366;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul li {
+  font-size: 1.2rem;
+  margin: 0.8rem 0;
+  padding: 0.6rem;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+main ul li:hover {
+  background-color: #e0e8f0;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+/* --- Estilos generales --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #003366; /* azul Real Madrid */
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main h2 {
+  text-align: center;
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Jugadores Históricos --- */
+.historicos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.hist-jugador {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hist-jugador:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hist-jugador img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.hist-jugador p {
+  margin: 0;
+  font-weight: bold;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+/* --- Footer opcional --- */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
